@@ -1,24 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
-<rect width="900" height="1200" fill="#0b1511"/>
-<text x="450" y="65" font-size="52" fill="#e6c879" font-weight="bold" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">HOPECHESS</text>
-<text x="450" y="110" font-size="30" fill="#f3f0df" font-weight="bold" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">WEEKLY RATING CLIMBERS</text>
-<text x="450" y="145" font-size="20" fill="#b8c8b9" font-weight="normal" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">THINK. PLAY. CONQUER.</text>
-<rect x="25" y="170" width="850" height="195" rx="18" fill="#192b21" stroke="#526c50" stroke-width="2"/>
-<text x="55" y="218" font-size="34" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">RAPID</text>
-<text x="55" y="285" font-size="26" fill="#b8c8b9" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Collecting 7-day history...</text>
-<rect x="25" y="380" width="850" height="195" rx="18" fill="#192b21" stroke="#526c50" stroke-width="2"/>
-<text x="55" y="428" font-size="34" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">BLITZ</text>
-<text x="55" y="495" font-size="26" fill="#b8c8b9" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Collecting 7-day history...</text>
-<rect x="25" y="590" width="850" height="195" rx="18" fill="#192b21" stroke="#526c50" stroke-width="2"/>
-<text x="55" y="638" font-size="34" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">BULLET</text>
-<text x="55" y="705" font-size="26" fill="#b8c8b9" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Collecting 7-day history...</text>
-<rect x="25" y="810" width="850" height="300" rx="18" fill="#192b21" stroke="#526c50" stroke-width="2"/>
-<text x="450" y="865" font-size="36" fill="#e6c879" font-weight="bold" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">CHAMPIONS' HALL</text>
-<text x="65" y="935" font-size="27" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">RAPID</text>
-<text x="840" y="935" font-size="25" fill="#f3f0df" font-weight="bold" text-anchor="end" font-family="Arial, Helvetica, sans-serif">berniebunnytv  |  1559</text>
-<text x="65" y="1000" font-size="27" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">BLITZ</text>
-<text x="840" y="1000" font-size="25" fill="#f3f0df" font-weight="bold" text-anchor="end" font-family="Arial, Helvetica, sans-serif">roooosas  |  1600</text>
-<text x="65" y="1065" font-size="27" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">BULLET</text>
-<text x="840" y="1065" font-size="25" fill="#f3f0df" font-weight="bold" text-anchor="end" font-family="Arial, Helvetica, sans-serif">roooosas  |  1932</text>
-<text x="450" y="1160" font-size="22" fill="#e6c879" font-weight="bold" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">HOPECHESS  •  THINK. PLAY. CONQUER.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1650" viewBox="0 0 500 1650">
+<rect width="500" height="1650" fill="#0b1511"/>
+<text x="250" y="65" font-size="42" fill="#e6c879" font-weight="bold" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">HOPECHESS</text>
+<text x="250" y="110" font-size="27" fill="#f3f0df" font-weight="bold" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">WEEKLY CLIMBERS</text>
+<text x="250" y="145" font-size="18" fill="#b8c8b9" font-weight="normal" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">THINK. PLAY. CONQUER.</text>
+<rect x="15" y="180" width="470" height="275" rx="16" fill="#192b21" stroke="#526c50" stroke-width="2"/>
+<text x="35" y="228" font-size="32" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">RAPID</text>
+<text x="35" y="300" font-size="22" fill="#b8c8b9" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Collecting history...</text>
+<rect x="15" y="480" width="470" height="275" rx="16" fill="#192b21" stroke="#526c50" stroke-width="2"/>
+<text x="35" y="528" font-size="32" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">BLITZ</text>
+<text x="35" y="600" font-size="22" fill="#b8c8b9" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Collecting history...</text>
+<rect x="15" y="780" width="470" height="275" rx="16" fill="#192b21" stroke="#526c50" stroke-width="2"/>
+<text x="35" y="828" font-size="32" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">BULLET</text>
+<text x="35" y="900" font-size="22" fill="#b8c8b9" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Collecting history...</text>
+<rect x="15" y="1090" width="470" height="400" rx="16" fill="#192b21" stroke="#526c50" stroke-width="2"/>
+<text x="250" y="1150" font-size="29" fill="#e6c879" font-weight="bold" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">CHAMPIONS' HALL</text>
+<text x="35" y="1235" font-size="24" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">RAPID</text>
+<text x="35" y="1270" font-size="23" fill="#f3f0df" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">berniebunnytv</text>
+<text x="35" y="1297" font-size="19" fill="#9ed39f" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Rating: 1559</text>
+<text x="35" y="1320" font-size="24" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">BLITZ</text>
+<text x="35" y="1355" font-size="23" fill="#f3f0df" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">roooosas</text>
+<text x="35" y="1382" font-size="19" fill="#9ed39f" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Rating: 1600</text>
+<text x="35" y="1405" font-size="24" fill="#e6c879" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">BULLET</text>
+<text x="35" y="1440" font-size="23" fill="#f3f0df" font-weight="bold" text-anchor="start" font-family="Arial, Helvetica, sans-serif">roooosas</text>
+<text x="35" y="1467" font-size="19" fill="#9ed39f" font-weight="normal" text-anchor="start" font-family="Arial, Helvetica, sans-serif">Rating: 1932</text>
+<text x="250" y="1540" font-size="25" fill="#e6c879" font-weight="bold" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">HOPECHESS</text>
+<text x="250" y="1575" font-size="18" fill="#b8c8b9" font-weight="normal" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">THINK. PLAY. CONQUER.</text>
 </svg>
