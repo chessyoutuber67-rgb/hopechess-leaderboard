@@ -31,6 +31,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install PNG converter
+        run: pip install cairosvg
+
       - name: Run Chess.com API test
         run: python test_api.py
 
@@ -40,19 +43,23 @@ jobs:
       - name: Build leaderboard
         run: python build_leaderboard.py
 
-      - name: Generate leaderboard image
+      - name: Generate leaderboard SVG
         run: python generate_leaderboard_svg.py
+
+      - name: Convert leaderboard to PNG
+        run: python convert_to_png.py
 
       - name: Save leaderboard to GitHub
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add rating_history.json leaderboard.json leaderboard.svg
+          git add rating_history.json leaderboard.json leaderboard.svg leaderboard.png
 
           if git diff --cached --quiet; then
             echo "No changes to save."
           else
             git commit -m "Update HOPECHESS leaderboard"
             git push origin main
+          fi
           fi
