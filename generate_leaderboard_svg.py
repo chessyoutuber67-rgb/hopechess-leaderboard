@@ -6,9 +6,9 @@ from xml.sax.saxutils import escape
 INPUT_FILE = Path("leaderboard.json")
 OUTPUT_FILE = Path("leaderboard.svg")
 
-# Narrower and taller layout
+# Exact 1:3 portrait layout
 WIDTH = 500
-HEIGHT = 1650
+HEIGHT = 1500
 
 GOLD = "#e6c879"
 WHITE = "#f3f0df"
@@ -54,35 +54,36 @@ def main():
 
         f'<rect width="{WIDTH}" height="{HEIGHT}" fill="{BACKGROUND}"/>',
 
-        text(250, 65, "HOPECHESS", 42, GOLD, "bold", "middle"),
-        text(250, 110, "WEEKLY CLIMBERS", 27, WHITE, "bold", "middle"),
-        text(250, 145, "THINK. PLAY. CONQUER.", 18, MUTED, "normal", "middle"),
+        # HEADER
+        text(250, 55, "HOPECHESS", 42, GOLD, "bold", "middle"),
+        text(250, 98, "WEEKLY CLIMBERS", 27, WHITE, "bold", "middle"),
+        text(250, 130, "THINK. PLAY. CONQUER.", 18, MUTED, "normal", "middle"),
     ]
 
     # WEEKLY CLIMBERS
     modes = [
-        ("rapid", "RAPID", 180),
-        ("blitz", "BLITZ", 480),
-        ("bullet", "BULLET", 780),
+        ("rapid", "RAPID", 165),
+        ("blitz", "BLITZ", 440),
+        ("bullet", "BULLET", 715),
     ]
 
     for mode, label, top in modes:
-        parts.append(card(top, 275))
+        parts.append(card(top, 260))
 
         parts.append(
-            text(35, top + 48, label, 32, GOLD, "bold")
+            text(35, top + 43, label, 32, GOLD, "bold")
         )
 
         climbers = data.get("weekly_climbers", {}).get(mode, [])
 
         if not climbers:
             parts.append(
-                text(35, top + 120, "Collecting history...",
+                text(35, top + 130, "Collecting history...",
                      22, MUTED)
             )
         else:
             for index, player in enumerate(climbers[:3]):
-                y = top + 105 + index * 75
+                y = top + 95 + index * 65
 
                 username = player.get("username", "Unknown")
                 change = player.get("change", 0)
@@ -94,18 +95,18 @@ def main():
                 )
 
                 parts.append(
-                    text(35, y + 32,
+                    text(35, y + 27,
                          f"+{change} rating points  |  {rating}",
-                         19, GREEN_TEXT, "bold")
+                         18, GREEN_TEXT, "bold")
                 )
 
     # CHAMPIONS' HALL
-    champion_top = 1090
+    champion_top = 995
 
-    parts.append(card(champion_top, 400))
+    parts.append(card(champion_top, 385))
 
     parts.append(
-        text(250, champion_top + 60,
+        text(250, champion_top + 55,
              "CHAMPIONS' HALL", 29, GOLD, "bold", "middle")
     )
 
@@ -118,7 +119,7 @@ def main():
     ]
 
     for index, (mode, label) in enumerate(champion_modes):
-        y = champion_top + 145 + index * 85
+        y = champion_top + 120 + index * 85
 
         players = rankings.get(mode, [])
 
@@ -128,16 +129,16 @@ def main():
             rating = champion.get("rating", "N/A")
 
             parts.append(
-                text(35, y, label, 24, GOLD, "bold")
+                text(35, y, label, 23, GOLD, "bold")
             )
 
             parts.append(
-                text(35, y + 35, username, 23, WHITE, "bold")
+                text(35, y + 29, username, 22, WHITE, "bold")
             )
 
             parts.append(
-                text(35, y + 62, f"Rating: {rating}",
-                     19, GREEN_TEXT)
+                text(35, y + 54, f"Rating: {rating}",
+                     18, GREEN_TEXT)
             )
         else:
             parts.append(
@@ -146,11 +147,11 @@ def main():
 
     # FOOTER
     parts.append(
-        text(250, 1540, "HOPECHESS", 25, GOLD, "bold", "middle")
+        text(250, 1440, "HOPECHESS", 25, GOLD, "bold", "middle")
     )
 
     parts.append(
-        text(250, 1575, "THINK. PLAY. CONQUER.",
+        text(250, 1475, "THINK. PLAY. CONQUER.",
              18, MUTED, "normal", "middle")
     )
 
@@ -161,7 +162,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("HOPECHESS NARROW LEADERBOARD GENERATED!")
+    print("HOPECHESS 1:3 LEADERBOARD GENERATED!")
 
 
 if __name__ == "__main__":
