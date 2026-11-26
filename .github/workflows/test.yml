@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.x"
-
       - name: Run Chess.com API test
         run: python test_api.py
+
+      - name: Fetch player ratings
+        run: python fetch_ratings.py
