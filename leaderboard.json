@@ -1,66 +1,84 @@
 {
-    "updated_at": "2026-11-26T15:41:49.146456+00:00",
+    "updated_at": "2026-11-26T16:07:46.989479+00:00",
     "total_players": 6,
     "players": [
         {
             "username": "berniebunnytv",
-            "timestamp": "2026-11-26T15:41:49.146456+00:00",
-            "rapid": 1534,
-            "rapid_change": 0,
+            "timestamp": "2026-11-26T16:07:46.989479+00:00",
+            "rapid": 1542,
+            "rapid_change": 8,
+            "rapid_weekly_change": null,
             "blitz": 1106,
             "blitz_change": 0,
+            "blitz_weekly_change": null,
             "bullet": 1015,
-            "bullet_change": 0
+            "bullet_change": 0,
+            "bullet_weekly_change": null
         },
         {
             "username": "fixyx",
-            "timestamp": "2026-11-26T15:41:49.146456+00:00",
+            "timestamp": "2026-11-26T16:07:46.989479+00:00",
             "rapid": 873,
             "rapid_change": 0,
+            "rapid_weekly_change": null,
             "blitz": 663,
             "blitz_change": 0,
+            "blitz_weekly_change": null,
             "bullet": 1034,
-            "bullet_change": 0
+            "bullet_change": 0,
+            "bullet_weekly_change": null
         },
         {
             "username": "freddiedaman77",
-            "timestamp": "2026-11-26T15:41:49.146456+00:00",
+            "timestamp": "2026-11-26T16:07:46.989479+00:00",
             "rapid": 288,
             "rapid_change": 0,
+            "rapid_weekly_change": null,
             "blitz": 387,
             "blitz_change": 0,
+            "blitz_weekly_change": null,
             "bullet": 306,
-            "bullet_change": 0
+            "bullet_change": 0,
+            "bullet_weekly_change": null
         },
         {
             "username": "grecosacrifice",
-            "timestamp": "2026-11-26T15:41:49.146456+00:00",
+            "timestamp": "2026-11-26T16:07:46.989479+00:00",
             "rapid": 1039,
             "rapid_change": 0,
+            "rapid_weekly_change": null,
             "blitz": 1152,
             "blitz_change": 0,
+            "blitz_weekly_change": null,
             "bullet": 1350,
-            "bullet_change": 0
+            "bullet_change": 0,
+            "bullet_weekly_change": null
         },
         {
             "username": "grecosacrifice2",
-            "timestamp": "2026-11-26T15:41:49.146456+00:00",
+            "timestamp": "2026-11-26T16:07:46.989479+00:00",
             "rapid": 1500,
             "rapid_change": 0,
+            "rapid_weekly_change": null,
             "blitz": 1500,
             "blitz_change": 0,
+            "blitz_weekly_change": null,
             "bullet": null,
-            "bullet_change": null
+            "bullet_change": null,
+            "bullet_weekly_change": null
         },
         {
             "username": "roooosas",
-            "timestamp": "2026-11-26T15:41:49.146456+00:00",
+            "timestamp": "2026-11-26T16:07:46.989479+00:00",
             "rapid": 1206,
             "rapid_change": 0,
+            "rapid_weekly_change": null,
             "blitz": 1600,
             "blitz_change": 0,
+            "blitz_weekly_change": null,
             "bullet": 1932,
-            "bullet_change": 0
+            "bullet_change": 0,
+            "bullet_weekly_change": null
         }
     ],
     "rankings": {
@@ -68,8 +86,8 @@
             {
                 "rank": 1,
                 "username": "berniebunnytv",
-                "rating": 1534,
-                "change": 0
+                "rating": 1542,
+                "change": 8
             },
             {
                 "rank": 2,
@@ -176,7 +194,7 @@
     "biggest_improver": {
         "rapid": {
             "username": "berniebunnytv",
-            "change": 0
+            "change": 8
         },
         "blitz": {
             "username": "berniebunnytv",
@@ -186,5 +204,10 @@
             "username": "berniebunnytv",
             "change": 0
         }
+    },
+    "weekly_climbers": {
+        "rapid": [],
+        "blitz": [],
+        "bullet": []
     }
 }
