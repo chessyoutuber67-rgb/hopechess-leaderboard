@@ -40,16 +40,21 @@ jobs:
       - name: Build leaderboard
         run: python build_leaderboard.py
 
+      - name: Generate leaderboard image
+        run: python generate_leaderboard_svg.py
+
       - name: Save leaderboard to GitHub
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add rating_history.json leaderboard.json
+          git add rating_history.json leaderboard.json leaderboard.svg
 
           if git diff --cached --quiet; then
             echo "No changes to save."
           else
             git commit -m "Update HOPECHESS leaderboard"
+            git push origin main
+          fi
             git push origin main
           fi
