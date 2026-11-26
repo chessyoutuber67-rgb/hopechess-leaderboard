@@ -7,7 +7,7 @@ INPUT_FILE = Path("leaderboard.json")
 OUTPUT_FILE = Path("leaderboard.svg")
 
 WIDTH = 700
-HEIGHT = 1500
+HEIGHT = 1840
 
 GOLD = "#e6c879"
 WHITE = "#f3f0df"
@@ -56,6 +56,7 @@ def main():
         ("bullet", "BULLET", 1030),
     ]
 
+    # WEEKLY RATING CLIMBERS
     for mode, label, top in modes:
         parts.append(card(top, 390))
         parts.append(text(45, top + 55, label, 38, GOLD, "bold"))
@@ -77,11 +78,56 @@ def main():
                     text(45, y, f"{index + 1}. {username}", 25, WHITE, "bold")
                 )
                 parts.append(
-                    text(45, y + 30, f"+{change} rating points | Now: {rating}",
-                         20, "#9ed39f")
+                    text(
+                        45, y + 30,
+                        f"+{change} rating points | Now: {rating}",
+                        20, "#9ed39f"
+                    )
                 )
 
-    parts.append(text(40, 1480, "HOPECHESS • CLUB CHAMPIONS", 20, GOLD, "bold"))
+    # CURRENT CLUB CHAMPIONS
+    champion_top = 1450
+    parts.append(card(champion_top, 340))
+    parts.append(
+        text(45, champion_top + 60, "CURRENT CLUB CHAMPIONS",
+             32, GOLD, "bold")
+    )
+
+    rankings = data.get("rankings", {})
+
+    champion_modes = [
+        ("rapid", "RAPID"),
+        ("blitz", "BLITZ"),
+        ("bullet", "BULLET"),
+    ]
+
+    for index, (mode, label) in enumerate(champion_modes):
+        y = champion_top + 140 + index * 75
+        players = rankings.get(mode, [])
+
+        parts.append(text(45, y, label, 25, GOLD, "bold"))
+
+        if players:
+            champion = players[0]
+            username = champion.get("username", "Unknown")
+            rating = champion.get("rating", "N/A")
+
+            parts.append(
+                text(220, y, username, 25, WHITE, "bold")
+            )
+            parts.append(
+                text(220, y + 30, f"Rating: {rating}", 20, MUTED)
+            )
+        else:
+            parts.append(
+                text(220, y, "No rating data yet", 22, MUTED)
+            )
+
+    parts.append(
+        text(40, 1820, "HOPECHESS • THINK. PLAY. CONQUER.",
+             19, GOLD, "bold")
+    )
+
     parts.append("</svg>")
 
     OUTPUT_FILE.write_text("\n".join(parts), encoding="utf-8")
@@ -90,3 +136,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
