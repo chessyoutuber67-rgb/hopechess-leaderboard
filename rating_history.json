@@ -1,1 +1,50 @@
-{}
+{
+    "berniebunnytv": [
+        {
+            "timestamp": "2026-11-26T15:27:14.058805+00:00",
+            "rapid": 1534,
+            "blitz": 1106,
+            "bullet": 1015
+        }
+    ],
+    "fixyx": [
+        {
+            "timestamp": "2026-11-26T15:27:14.058805+00:00",
+            "rapid": 873,
+            "blitz": 663,
+            "bullet": 1034
+        }
+    ],
+    "freddiedaman77": [
+        {
+            "timestamp": "2026-11-26T15:27:14.058805+00:00",
+            "rapid": 288,
+            "blitz": 387,
+            "bullet": 306
+        }
+    ],
+    "grecosacrifice": [
+        {
+            "timestamp": "2026-11-26T15:27:14.058805+00:00",
+            "rapid": 1039,
+            "blitz": 1152,
+            "bullet": 1350
+        }
+    ],
+    "grecosacrifice2": [
+        {
+            "timestamp": "2026-11-26T15:27:14.058805+00:00",
+            "rapid": 1500,
+            "blitz": 1500,
+            "bullet": null
+        }
+    ],
+    "roooosas": [
+        {
+            "timestamp": "2026-11-26T15:27:14.058805+00:00",
+            "rapid": 1206,
+            "blitz": 1600,
+            "bullet": 1932
+        }
+    ]
+}
