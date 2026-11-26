@@ -6,8 +6,9 @@ from xml.sax.saxutils import escape
 INPUT_FILE = Path("leaderboard.json")
 OUTPUT_FILE = Path("leaderboard.svg")
 
-WIDTH = 900
-HEIGHT = 1200
+# Narrower and taller layout
+WIDTH = 500
+HEIGHT = 1650
 
 GOLD = "#e6c879"
 WHITE = "#f3f0df"
@@ -21,7 +22,7 @@ def safe(value):
     return escape(str(value))
 
 
-def text(x, y, value, size=28, color=WHITE,
+def text(x, y, value, size=25, color=WHITE,
          weight="normal", anchor="start"):
     return (
         f'<text x="{x}" y="{y}" '
@@ -36,8 +37,8 @@ def text(x, y, value, size=28, color=WHITE,
 
 def card(y, height):
     return (
-        f'<rect x="25" y="{y}" width="850" height="{height}" '
-        f'rx="18" fill="{GREEN}" '
+        f'<rect x="15" y="{y}" width="470" height="{height}" '
+        f'rx="16" fill="{GREEN}" '
         f'stroke="#526c50" stroke-width="2"/>'
     )
 
@@ -53,58 +54,59 @@ def main():
 
         f'<rect width="{WIDTH}" height="{HEIGHT}" fill="{BACKGROUND}"/>',
 
-        text(450, 65, "HOPECHESS", 52, GOLD, "bold", "middle"),
-        text(450, 110, "WEEKLY RATING CLIMBERS", 30, WHITE, "bold", "middle"),
-        text(450, 145, "THINK. PLAY. CONQUER.", 20, MUTED, "normal", "middle"),
+        text(250, 65, "HOPECHESS", 42, GOLD, "bold", "middle"),
+        text(250, 110, "WEEKLY CLIMBERS", 27, WHITE, "bold", "middle"),
+        text(250, 145, "THINK. PLAY. CONQUER.", 18, MUTED, "normal", "middle"),
     ]
 
     # WEEKLY CLIMBERS
     modes = [
-        ("rapid", "RAPID", 170),
-        ("blitz", "BLITZ", 380),
-        ("bullet", "BULLET", 590),
+        ("rapid", "RAPID", 180),
+        ("blitz", "BLITZ", 480),
+        ("bullet", "BULLET", 780),
     ]
 
     for mode, label, top in modes:
-        parts.append(card(top, 195))
+        parts.append(card(top, 275))
 
         parts.append(
-            text(55, top + 48, label, 34, GOLD, "bold")
+            text(35, top + 48, label, 32, GOLD, "bold")
         )
 
         climbers = data.get("weekly_climbers", {}).get(mode, [])
 
         if not climbers:
             parts.append(
-                text(55, top + 115, "Collecting 7-day history...",
-                     26, MUTED)
+                text(35, top + 120, "Collecting history...",
+                     22, MUTED)
             )
         else:
             for index, player in enumerate(climbers[:3]):
-                y = top + 100 + index * 45
+                y = top + 105 + index * 75
 
                 username = player.get("username", "Unknown")
                 change = player.get("change", 0)
                 rating = player.get("rating", "N/A")
 
                 parts.append(
-                    text(55, y, f"{index + 1}. {username}",
-                         25, WHITE, "bold")
+                    text(35, y, f"{index + 1}. {username}",
+                         24, WHITE, "bold")
                 )
 
                 parts.append(
-                    text(840, y, f"+{change}  |  {rating}",
-                         24, GREEN_TEXT, "bold", "end")
+                    text(35, y + 32,
+                         f"+{change} rating points  |  {rating}",
+                         19, GREEN_TEXT, "bold")
                 )
 
-    # CURRENT CHAMPIONS
-    champion_top = 810
+    # CHAMPIONS' HALL
+    champion_top = 1090
 
-    parts.append(card(champion_top, 300))
+    parts.append(card(champion_top, 400))
 
     parts.append(
-        text(450, champion_top + 55,
-             "CHAMPIONS' HALL", 36, GOLD, "bold", "middle")
+        text(250, champion_top + 60,
+             "CHAMPIONS' HALL", 29, GOLD, "bold", "middle")
     )
 
     rankings = data.get("rankings", {})
@@ -116,7 +118,7 @@ def main():
     ]
 
     for index, (mode, label) in enumerate(champion_modes):
-        y = champion_top + 125 + index * 65
+        y = champion_top + 145 + index * 85
 
         players = rankings.get(mode, [])
 
@@ -126,23 +128,30 @@ def main():
             rating = champion.get("rating", "N/A")
 
             parts.append(
-                text(65, y, label, 27, GOLD, "bold")
+                text(35, y, label, 24, GOLD, "bold")
             )
 
             parts.append(
-                text(840, y, f"{username}  |  {rating}",
-                     25, WHITE, "bold", "end")
+                text(35, y + 35, username, 23, WHITE, "bold")
+            )
+
+            parts.append(
+                text(35, y + 62, f"Rating: {rating}",
+                     19, GREEN_TEXT)
             )
         else:
             parts.append(
-                text(65, y, f"{label}: No champion data",
-                     25, MUTED)
+                text(35, y, f"{label}: No data", 22, MUTED)
             )
 
     # FOOTER
     parts.append(
-        text(450, 1160, "HOPECHESS  •  THINK. PLAY. CONQUER.",
-             22, GOLD, "bold", "middle")
+        text(250, 1540, "HOPECHESS", 25, GOLD, "bold", "middle")
+    )
+
+    parts.append(
+        text(250, 1575, "THINK. PLAY. CONQUER.",
+             18, MUTED, "normal", "middle")
     )
 
     parts.append("</svg>")
@@ -152,7 +161,7 @@ def main():
         encoding="utf-8"
     )
 
-    print("HOPECHESS SVG GENERATED!")
+    print("HOPECHESS NARROW LEADERBOARD GENERATED!")
 
 
 if __name__ == "__main__":
