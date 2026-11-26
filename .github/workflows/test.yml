@@ -1,8 +1,9 @@
-
 name: HOPECHESS API Test
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
@@ -51,3 +52,6 @@ jobs:
             git commit -m "Update HOPECHESS leaderboard"
             git push origin main
           fi
+            git commit -m "Update HOPECHESS leaderboard"
+            git push origin main
+          fi          fi
