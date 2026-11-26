@@ -10,7 +10,6 @@ MODES = ("rapid", "blitz", "bullet")
 
 
 def parse_timestamp(value):
-    """Convert an ISO timestamp into a timezone-aware datetime."""
     if not value:
         return None
 
@@ -39,7 +38,6 @@ def main():
         if not snapshots:
             continue
 
-        # Sort snapshots by date, oldest first.
         snapshots = sorted(
             snapshots,
             key=lambda s: parse_timestamp(s.get("timestamp"))
@@ -48,7 +46,6 @@ def main():
 
         current = snapshots[-1]
         current_time = parse_timestamp(current.get("timestamp"))
-
         previous = snapshots[-2] if len(snapshots) >= 2 else None
 
         player = {
@@ -56,7 +53,6 @@ def main():
             "timestamp": current.get("timestamp")
         }
 
-        # Find the latest snapshot from at least 7 days earlier.
         weekly_baseline = None
 
         if current_time:
@@ -74,18 +70,16 @@ def main():
 
             player[mode] = rating
 
-            # Existing change: since the previous snapshot.
             if (
                 isinstance(rating, (int, float))
-                and isinstance(old_rating, (int, float))
                 and not isinstance(rating, bool)
+                and isinstance(old_rating, (int, float))
                 and not isinstance(old_rating, bool)
             ):
                 player[f"{mode}_change"] = rating - old_rating
             else:
                 player[f"{mode}_change"] = None
 
-            # New change: compared with at least 7 days ago.
             baseline_rating = (
                 weekly_baseline.get(mode)
                 if weekly_baseline else None
@@ -127,8 +121,6 @@ def main():
     }
 
     for mode in MODES:
-
-        # Existing rating rankings.
         ranked = [
             p for p in players
             if isinstance(p[mode], (int, float))
@@ -147,10 +139,10 @@ def main():
             for index, player in enumerate(ranked)
         ]
 
-        # Existing biggest improver calculation.
         improvers = [
             p for p in players
             if isinstance(p[f"{mode}_change"], (int, float))
+            and not isinstance(p[f"{mode}_change"], bool)
         ]
 
         improvers.sort(
@@ -168,13 +160,8 @@ def main():
         else:
             leaderboard["biggest_improver"][mode] = None
 
-        # New genuine weekly climbers.
         weekly = weekly_candidates[mode]
-
-        weekly.sort(
-            key=lambda p: p["change"],
-            reverse=True
-        )
+        weekly.sort(key=lambda p: p["change"], reverse=True)
 
         leaderboard["weekly_climbers"][mode] = [
             {
@@ -219,55 +206,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-        ranked.sort(key=lambda p: p[mode], reverse=True)
-
-        leaderboard["rankings"][mode] = [
-            {
-                "rank": index + 1,
-                "username": player["username"],
-                "rating": player[mode],
-                "change": player[f"{mode}_change"]
-            }
-            for index, player in enumerate(ranked)
-        ]
-
-        improvers = [
-            p for p in players
-            if isinstance(p[f"{mode}_change"], (int, float))
-        ]
-
-        improvers.sort(
-            key=lambda p: p[f"{mode}_change"],
-            reverse=True
-        )
-
-        if improvers:
-            best = improvers[0]
-            leaderboard["biggest_improver"][mode] = {
-                "username": best["username"],
-                "change": best[f"{mode}_change"]
-            }
-        else:
-            leaderboard["biggest_improver"][mode] = None
-
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
-        json.dump(leaderboard, file, indent=4)
-
-    print("HOPECHESS LEADERBOARD GENERATED!")
-    print("Players:", len(players))
-
-    for mode in MODES:
-        print(f"\n{mode.upper()} TOP 3:")
-
-        for player in leaderboard["rankings"][mode][:3]:
-            print(
-                player["rank"],
-                player["username"],
-                player["rating"],
-                "Change:",
-                player["change"]
-            )
-
-
-if __name__ == "__main__":
-    main()
