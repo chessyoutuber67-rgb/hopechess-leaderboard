@@ -1,0 +1,190 @@
+{
+    "updated_at": "2026-11-26T15:35:17.822553+00:00",
+    "total_players": 6,
+    "players": [
+        {
+            "username": "berniebunnytv",
+            "timestamp": "2026-11-26T15:35:17.822553+00:00",
+            "rapid": 1534,
+            "rapid_change": 0,
+            "blitz": 1106,
+            "blitz_change": 0,
+            "bullet": 1015,
+            "bullet_change": 0
+        },
+        {
+            "username": "fixyx",
+            "timestamp": "2026-11-26T15:35:17.822553+00:00",
+            "rapid": 873,
+            "rapid_change": 0,
+            "blitz": 663,
+            "blitz_change": 0,
+            "bullet": 1034,
+            "bullet_change": 0
+        },
+        {
+            "username": "freddiedaman77",
+            "timestamp": "2026-11-26T15:35:17.822553+00:00",
+            "rapid": 288,
+            "rapid_change": 0,
+            "blitz": 387,
+            "blitz_change": 0,
+            "bullet": 306,
+            "bullet_change": 0
+        },
+        {
+            "username": "grecosacrifice",
+            "timestamp": "2026-11-26T15:35:17.822553+00:00",
+            "rapid": 1039,
+            "rapid_change": 0,
+            "blitz": 1152,
+            "blitz_change": 0,
+            "bullet": 1350,
+            "bullet_change": 0
+        },
+        {
+            "username": "grecosacrifice2",
+            "timestamp": "2026-11-26T15:35:17.822553+00:00",
+            "rapid": 1500,
+            "rapid_change": 0,
+            "blitz": 1500,
+            "blitz_change": 0,
+            "bullet": null,
+            "bullet_change": null
+        },
+        {
+            "username": "roooosas",
+            "timestamp": "2026-11-26T15:35:17.822553+00:00",
+            "rapid": 1206,
+            "rapid_change": 0,
+            "blitz": 1600,
+            "blitz_change": 0,
+            "bullet": 1932,
+            "bullet_change": 0
+        }
+    ],
+    "rankings": {
+        "rapid": [
+            {
+                "rank": 1,
+                "username": "berniebunnytv",
+                "rating": 1534,
+                "change": 0
+            },
+            {
+                "rank": 2,
+                "username": "grecosacrifice2",
+                "rating": 1500,
+                "change": 0
+            },
+            {
+                "rank": 3,
+                "username": "roooosas",
+                "rating": 1206,
+                "change": 0
+            },
+            {
+                "rank": 4,
+                "username": "grecosacrifice",
+                "rating": 1039,
+                "change": 0
+            },
+            {
+                "rank": 5,
+                "username": "fixyx",
+                "rating": 873,
+                "change": 0
+            },
+            {
+                "rank": 6,
+                "username": "freddiedaman77",
+                "rating": 288,
+                "change": 0
+            }
+        ],
+        "blitz": [
+            {
+                "rank": 1,
+                "username": "roooosas",
+                "rating": 1600,
+                "change": 0
+            },
+            {
+                "rank": 2,
+                "username": "grecosacrifice2",
+                "rating": 1500,
+                "change": 0
+            },
+            {
+                "rank": 3,
+                "username": "grecosacrifice",
+                "rating": 1152,
+                "change": 0
+            },
+            {
+                "rank": 4,
+                "username": "berniebunnytv",
+                "rating": 1106,
+                "change": 0
+            },
+            {
+                "rank": 5,
+                "username": "fixyx",
+                "rating": 663,
+                "change": 0
+            },
+            {
+                "rank": 6,
+                "username": "freddiedaman77",
+                "rating": 387,
+                "change": 0
+            }
+        ],
+        "bullet": [
+            {
+                "rank": 1,
+                "username": "roooosas",
+                "rating": 1932,
+                "change": 0
+            },
+            {
+                "rank": 2,
+                "username": "grecosacrifice",
+                "rating": 1350,
+                "change": 0
+            },
+            {
+                "rank": 3,
+                "username": "fixyx",
+                "rating": 1034,
+                "change": 0
+            },
+            {
+                "rank": 4,
+                "username": "berniebunnytv",
+                "rating": 1015,
+                "change": 0
+            },
+            {
+                "rank": 5,
+                "username": "freddiedaman77",
+                "rating": 306,
+                "change": 0
+            }
+        ]
+    },
+    "biggest_improver": {
+        "rapid": {
+            "username": "berniebunnytv",
+            "change": 0
+        },
+        "blitz": {
+            "username": "berniebunnytv",
+            "change": 0
+        },
+        "bullet": {
+            "username": "berniebunnytv",
+            "change": 0
+        }
+    }
+}
