@@ -45,10 +45,9 @@ jobs:
 
           git add rating_history.json leaderboard.json
 
-          git diff --cached --quiet && echo "No changes to save." || {
-            git commit -m "Update HOPECHESS leaderboard" &&
-            git push origin main
-          }
+          if git diff --cached --quiet; then
+            echo "No changes to save."
           else
-            echo "No rating history changes to save."
+            git commit -m "Update HOPECHESS leaderboard"
+            git push origin main
           fi
