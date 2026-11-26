@@ -56,5 +56,3 @@ jobs:
             git commit -m "Update HOPECHESS leaderboard"
             git push origin main
           fi
-            git push origin main
-          fi
