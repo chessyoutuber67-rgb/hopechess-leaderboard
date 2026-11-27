@@ -1,10 +1,10 @@
 {
-    "updated_at": "2026-11-26T17:27:32.019601+00:00",
+    "updated_at": "2026-11-27T01:00:39.669128+00:00",
     "total_players": 6,
     "players": [
         {
             "username": "berniebunnytv",
-            "timestamp": "2026-11-26T17:27:32.019601+00:00",
+            "timestamp": "2026-11-27T01:00:39.669128+00:00",
             "rapid": 1559,
             "rapid_change": 0,
             "rapid_weekly_change": null,
@@ -17,7 +17,7 @@
         },
         {
             "username": "fixyx",
-            "timestamp": "2026-11-26T17:27:32.019601+00:00",
+            "timestamp": "2026-11-27T01:00:39.669128+00:00",
             "rapid": 873,
             "rapid_change": 0,
             "rapid_weekly_change": null,
@@ -30,7 +30,7 @@
         },
         {
             "username": "freddiedaman77",
-            "timestamp": "2026-11-26T17:27:32.019601+00:00",
+            "timestamp": "2026-11-27T01:00:39.669128+00:00",
             "rapid": 288,
             "rapid_change": 0,
             "rapid_weekly_change": null,
@@ -43,7 +43,7 @@
         },
         {
             "username": "grecosacrifice",
-            "timestamp": "2026-11-26T17:27:32.019601+00:00",
+            "timestamp": "2026-11-27T01:00:39.669128+00:00",
             "rapid": 1039,
             "rapid_change": 0,
             "rapid_weekly_change": null,
@@ -56,7 +56,7 @@
         },
         {
             "username": "grecosacrifice2",
-            "timestamp": "2026-11-26T17:27:32.019601+00:00",
+            "timestamp": "2026-11-27T01:00:39.669128+00:00",
             "rapid": 1500,
             "rapid_change": 0,
             "rapid_weekly_change": null,
@@ -69,9 +69,9 @@
         },
         {
             "username": "roooosas",
-            "timestamp": "2026-11-26T17:27:32.019601+00:00",
-            "rapid": 1206,
-            "rapid_change": 0,
+            "timestamp": "2026-11-27T01:00:39.669128+00:00",
+            "rapid": 1214,
+            "rapid_change": 8,
             "rapid_weekly_change": null,
             "blitz": 1600,
             "blitz_change": 0,
@@ -98,8 +98,8 @@
             {
                 "rank": 3,
                 "username": "roooosas",
-                "rating": 1206,
-                "change": 0
+                "rating": 1214,
+                "change": 8
             },
             {
                 "rank": 4,
@@ -193,8 +193,8 @@
     },
     "biggest_improver": {
         "rapid": {
-            "username": "berniebunnytv",
-            "change": 0
+            "username": "roooosas",
+            "change": 8
         },
         "blitz": {
             "username": "berniebunnytv",
